@@ -1,0 +1,35 @@
+export const categories = ['Tutti', 'Infissi e serramenti', 'Porte', 'Vetrate', 'Installazioni speciali'] as const
+export type Category = typeof categories[number]
+export interface Project { image: string; title: string; category: Exclude<Category, 'Tutti'>; alt: string; layout?: 'wide' | 'portrait'; originalSrc?: string }
+export const homepageCount = 10
+export const projects: Project[] = [
+  {"image": "fotolegno", "title": "La posa incontra il legno", "category": "Porte", "alt": "Porta bianca con inserti scuri accanto a una parete rivestita in legno.", layout: 'wide' },
+  { image: 'IMG_4784', title: 'L’apertura verso l’esterno', category: 'Infissi e serramenti', alt: 'Serramento bianco a più ante su una facciata rossa con terrazzo.' },
+  { image: 'IMG_4744', title: 'Profili scuri, vetro trasparente', category: 'Vetrate', alt: 'Porta vetrata aperta con profili metallici neri in un ambiente piastrellato.' },
+  { image: 'IMG_4779', title: 'Un ingresso incorniciato', category: 'Porte', alt: 'Portone antracite inserito in una cornice in mattoni.' , layout: 'wide' },
+  {"image": "fotoimpalcatura", "title": "Durante l’installazione", "category": "Installazioni speciali", "alt": "Grande serramento durante i lavori, con ponteggio e installatore all’esterno.", originalSrc: "/images/fotoF/fotoimpalcatura.png"},
+  {"image": "IMG_4780", "title": "Una chiusura a due ante", "category": "Infissi e serramenti", "alt": "Chiusura grigia a due ante vista dall’interno.", layout: 'wide' },
+  { image: 'portabagno', title: 'Contrasti materici', category: 'Porte', alt: 'Porta scura installata in un bagno con rivestimenti grigi effetto pietra.' , layout: 'wide' },
+  { image: 'vetratalunga', title: 'Una vetrata a tutta altezza', category: 'Installazioni speciali', alt: 'Struttura vetrata verticale su più livelli accanto a una parete in pietra.' },
+  { image: 'IMG_4764', title: 'Separare con leggerezza', category: 'Vetrate', alt: 'Porta scorrevole in vetro con telaio nero a riquadri e binario esterno.' },
+  {"image": "IMG_4758", "title": "Una porta nel rivestimento", "category": "Porte", "alt": "Porta integrata in una parete con listelli verticali in legno.", layout: 'wide' },
+  { image: 'IMG_4772', title: 'Legno e luce negli interni', category: 'Porte', alt: 'Porte interne con finitura in legno, una con pannello vetrato.' },
+  { image: 'fotomare', title: 'Un’apertura sul paesaggio', category: 'Infissi e serramenti', alt: 'Vista del mare incorniciata dai montanti e dalla soglia di un grande serramento scorrevole.' , layout: 'wide' },
+  {"image": "IMG_4762", "title": "Finiture tono su tono", "category": "Porte", "alt": "Porte grigie integrate in un ambiente con pareti dalla finitura materica.", layout: 'wide' },
+  {"image": "IMG_4788", "title": "Disegno e trasparenza", "category": "Porte", "alt": "Porta bianca con vetro e decorazione geometrica a linee diagonali."},
+  { image: 'fotoverde', title: 'Precisione, da vicino', category: 'Installazioni speciali', alt: 'Installatore CF che regola a mano il profilo di una porta scorrevole in vetro cannettato.' },
+  { image: 'fotoparetepietra', title: 'Vetro e pietra, in continuità', category: 'Vetrate', alt: 'Serramento scorrevole scuro incorniciato da una parete in pietra naturale e una trave in legno.' , layout: 'wide' },
+  {"image": "IMG_4754", "title": "L’ingresso in legno", "category": "Porte", "alt": "Porta d’ingresso con finitura in legno e inserti orizzontali.", layout: 'wide' },
+  {"image": "IMG_4748", "title": "Due porte, un ambiente", "category": "Porte", "alt": "Due porte interne bianche con cornici sagomate affiancate nello stesso ambiente."},
+  { image: 'portariga', title: 'Geometrie nelle finiture', category: 'Porte', alt: 'Porta grigia con incisioni geometriche allineata alla parete interna.' },
+  {"image": "fotopettorina", "title": "Operativi, sul posto", "category": "Installazioni speciali", "alt": "Installatore CF con casco e pettorina durante la movimentazione di un serramento.", layout: 'wide' },
+  {"image": "IMG_4774", "title": "Luce attraverso l’ingresso", "category": "Porte", "alt": "Porta chiara con quattro aperture rettangolari luminose.", layout: 'wide' },
+  {"image": "IMG_4769", "title": "Vetro decorato negli interni", "category": "Porte", "alt": "Porta interna con pannello vetrato decorato."},
+  {"image": "IMG_4777", "title": "L’apertura sulla terrazza", "category": "Infissi e serramenti", "alt": "Serramento bianco scorrevole visto dalla terrazza esterna."},
+  { image: 'fotogru', title: 'La posa, anche in quota', category: 'Installazioni speciali', alt: 'Gru che solleva un grande serramento sopra un cantiere con muri in pietra.' , layout: 'wide' },
+  {"image": "IMG_4750", "title": "Luce in uno spazio raccolto", "category": "Infissi e serramenti", "alt": "Finestra bianca installata sopra un rivestimento a mosaico.", layout: 'wide' },
+  {"image": "IMG_4781", "title": "Verde e pietra all’ingresso", "category": "Porte", "alt": "Porta verde sotto un architrave in pietra su una facciata chiara."},
+  {"image": "fotoportabianca", "title": "Il dettaglio dell’ingresso", "category": "Porte", "alt": "Porta bianca con inserti metallici orizzontali, cornice e soglia visibili.", originalSrc: '/images/fotoF/fotoportabianca.png' },
+  {"image": "IMG_4786", "title": "Una linea curva nel vetro", "category": "Porte", "alt": "Porta bianca con inserto vetrato curvo in un ambiente rivestito.", layout: 'wide' },
+  { image: 'vetrata', title: 'Vetro incorniciato dalla pietra', category: 'Vetrate', alt: 'Vetrata a due ante con telaio color bronzo su una facciata rivestita in pietra.', originalSrc: '/images/fotoF/vetrata.png' },
+]

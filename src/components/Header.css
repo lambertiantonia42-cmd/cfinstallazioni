@@ -1,0 +1,25 @@
+.header { position: absolute; z-index: 10; inset: 0 0 auto; padding: 20px 0; color: var(--cf-warm-white); }
+.header__inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.header__brand { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+.header__brand img { width: 46px; height: 60px; object-fit: contain; }
+.header__brand > span { font-size: .8rem; font-weight: 600; letter-spacing: .14em; line-height: 1.5; }
+.header__brand strong { display: block; font-weight: 600; }
+.header__menu { display: flex; align-items: center; gap: 12px; padding: 10px 14px; min-height: 48px; border: 1px solid #91a498; background: var(--cf-green-dark); color: inherit; border-radius: 2px; cursor: pointer; }
+.header__menu svg { flex-shrink: 0; }
+.header__nav { display: none; }
+.header__nav--open { position: absolute; top: 100%; left: 20px; right: 20px; display: grid; padding: 16px; background: var(--cf-green-dark); border: 1px solid #829987; box-shadow: 0 16px 32px #0003; }
+.header__nav a { display: flex; align-items: center; min-height: 48px; padding: 10px 12px; font-size: .9375rem; font-weight: 600; }
+.header__nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.header__cta { background: var(--cf-warm-white); color: var(--cf-green-dark); border-radius: 2px; gap: 16px; }
+@media (max-width: 1099px) {
+  .header--scrolled .header__menu { position: fixed; top: calc(12px + env(safe-area-inset-top, 0px)); right: calc(20px + env(safe-area-inset-right, 0px)); z-index: 12; width: 48px; height: 48px; padding: 0; justify-content: center; }
+  .header--scrolled .header__menu-label { display: none; }
+  .header--scrolled .header__nav--open { position: fixed; top: calc(72px + env(safe-area-inset-top, 0px)); left: calc(20px + env(safe-area-inset-left, 0px)); right: calc(20px + env(safe-area-inset-right, 0px)); z-index: 11; }
+  .header__nav--open { max-height: calc(100dvh - 112px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)); overflow-y: auto; overscroll-behavior: contain; }
+}
+@media (min-width: 1100px) {
+  .header { padding: 24px 0; }
+  .header__brand img { width: 54px; height: 70px; }
+  .header__menu { display: none; }
+  .header__nav, .header__nav--open { position: static; display: flex; align-items: center; gap: 12px; padding: 0; border: 0; background: transparent; box-shadow: none; }
+}

@@ -1,0 +1,32 @@
+.about-page h1,
+.about-page h2 { font-weight: 600; line-height: 1; letter-spacing: -.02em; }
+.about-page h1 { max-width: 1000px; margin-top: 20px; font-size: clamp(2.8rem, 6vw, 5.5rem); }
+.about-page h2 { font-size: clamp(2.35rem, 5vw, 4.5rem); }
+.about-page h2 span { color: var(--cf-green); }
+.about-page__intro { padding: 150px 0 64px; background: var(--cf-green-dark); color: var(--cf-warm-white); }
+.about-page__intro .eyebrow,
+.about-page__intro h1 span,
+.about-page__role { color: #d3ddcd; }
+.about-page__profile,
+.about-page__training,
+.about-page__qualification-grid { display: grid; gap: 36px; align-items: center; }
+.about-page__profile { margin-top: 48px; }
+.about-page__profile img,
+.about-page__training img { width: 100%; height: auto; }
+.about-page__role { margin-top: 16px; font-size: .88rem; line-height: 1.75; }
+.about-page__qualification { background: var(--cf-stone); }
+.about-page__qualification h2 { margin-top: 16px; }
+.about-page__qualification .about__text { margin-top: 0; }
+.about-page__certificate { min-height: 48px; border: 0; border-bottom: 1px solid var(--cf-green); background: transparent; cursor: pointer; }
+.about-page__cta { background: var(--cf-green-dark); color: var(--cf-warm-white); }
+.about-page__cta .hero__button { margin-top: 28px; }
+.about-page__dialog img { height: min(72dvh, calc(100dvh - 116px)); }
+
+@media (min-width: 900px) {
+  .about-page__intro { padding: 176px 0 110px; }
+  .about-page__profile,
+  .about-page__training,
+  .about-page__qualification-grid { grid-template-columns: 1fr .9fr; gap: 100px; }
+  .about-page__profile { margin-top: 64px; }
+  .about-page__training { grid-template-columns: .9fr 1fr; }
+}
